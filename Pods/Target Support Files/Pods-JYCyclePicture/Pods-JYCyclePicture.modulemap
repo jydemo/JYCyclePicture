@@ -1,0 +1,6 @@
+framework module Pods_JYCyclePicture {
+  umbrella header "Pods-JYCyclePicture-umbrella.h"
+
+  export *
+  module * { export * }
+}

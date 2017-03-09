@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C0C648A1E6D5899007C0516"
-               BuildableName = "JYCyclePicture.app"
-               BlueprintName = "JYCyclePicture"
-               ReferencedContainer = "container:JYCyclePicture.xcodeproj">
+               BlueprintIdentifier = "B302FA1FEE5227F75517249F859B5637"
+               BuildableName = "Pods_JYCyclePicture.framework"
+               BlueprintName = "Pods-JYCyclePicture"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C0C648A1E6D5899007C0516"
-            BuildableName = "JYCyclePicture.app"
-            BlueprintName = "JYCyclePicture"
-            ReferencedContainer = "container:JYCyclePicture.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C0C648A1E6D5899007C0516"
-            BuildableName = "JYCyclePicture.app"
-            BlueprintName = "JYCyclePicture"
-            ReferencedContainer = "container:JYCyclePicture.xcodeproj">
+            BlueprintIdentifier = "B302FA1FEE5227F75517249F859B5637"
+            BuildableName = "Pods_JYCyclePicture.framework"
+            BlueprintName = "Pods-JYCyclePicture"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C0C648A1E6D5899007C0516"
-            BuildableName = "JYCyclePicture.app"
-            BlueprintName = "JYCyclePicture"
-            ReferencedContainer = "container:JYCyclePicture.xcodeproj">
+            BlueprintIdentifier = "B302FA1FEE5227F75517249F859B5637"
+            BuildableName = "Pods_JYCyclePicture.framework"
+            BlueprintName = "Pods-JYCyclePicture"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

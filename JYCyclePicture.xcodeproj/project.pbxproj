@@ -12,9 +12,19 @@
 		5C0C64941E6D5899007C0516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C64921E6D5899007C0516 /* Main.storyboard */; };
 		5C0C64961E6D5899007C0516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C64951E6D5899007C0516 /* Assets.xcassets */; };
 		5C0C64991E6D5899007C0516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0C64971E6D5899007C0516 /* LaunchScreen.storyboard */; };
+		5C0C64A11E6D58C6007C0516 /* CycleView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0C64A01E6D58C6007C0516 /* CycleView+Extension.swift */; };
+		5C0C64A31E6D6136007C0516 /* CyclePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0C64A21E6D6136007C0516 /* CyclePictureView.swift */; };
+		5C0C64A51E6E5B4E007C0516 /* CyclePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0C64A41E6E5B4E007C0516 /* CyclePictureCell.swift */; };
+		5C0C64A71E6E950B007C0516 /* LocalPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0C64A61E6E950B007C0516 /* LocalPictureController.swift */; };
+		5C0C64A91E6E9541007C0516 /* WebPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0C64A81E6E9541007C0516 /* WebPictureController.swift */; };
+		5C5134971E6FE24A00FEAC95 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5134961E6FE24A00FEAC95 /* TestTableViewController.swift */; };
+		5C5134991E700B1600FEAC95 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5134981E700B1600FEAC95 /* TestWebViewController.swift */; };
+		5C995EB71E6F968B00ABC5D3 /* Image.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C995EB61E6F968B00ABC5D3 /* Image.plist */; };
+		772B5F829BB1B1578E3F8EF2 /* Pods_JYCyclePicture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FFA1ABAB2FE3073BD0FA37 /* Pods_JYCyclePicture.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CE38E5445911D562DA89AA0 /* Pods-JYCyclePicture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYCyclePicture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYCyclePicture/Pods-JYCyclePicture.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0C648B1E6D5899007C0516 /* JYCyclePicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYCyclePicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0C648E1E6D5899007C0516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C0C64901E6D5899007C0516 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,16 @@
 		5C0C64951E6D5899007C0516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C0C64981E6D5899007C0516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C0C649A1E6D5899007C0516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C0C64A01E6D58C6007C0516 /* CycleView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CycleView+Extension.swift"; sourceTree = "<group>"; };
+		5C0C64A21E6D6136007C0516 /* CyclePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePictureView.swift; sourceTree = "<group>"; };
+		5C0C64A41E6E5B4E007C0516 /* CyclePictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclePictureCell.swift; sourceTree = "<group>"; };
+		5C0C64A61E6E950B007C0516 /* LocalPictureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPictureController.swift; sourceTree = "<group>"; };
+		5C0C64A81E6E9541007C0516 /* WebPictureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPictureController.swift; sourceTree = "<group>"; };
+		5C5134961E6FE24A00FEAC95 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		5C5134981E700B1600FEAC95 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
+		5C995EB61E6F968B00ABC5D3 /* Image.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Image.plist; sourceTree = "<group>"; };
+		A8FFA1ABAB2FE3073BD0FA37 /* Pods_JYCyclePicture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYCyclePicture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1F1E6CC802A473A6A0B8B02 /* Pods-JYCyclePicture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYCyclePicture.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYCyclePicture/Pods-JYCyclePicture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772B5F829BB1B1578E3F8EF2 /* Pods_JYCyclePicture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 			children = (
 				5C0C648D1E6D5899007C0516 /* JYCyclePicture */,
 				5C0C648C1E6D5899007C0516 /* Products */,
+				768761D36C6E0AD0655DDFC1 /* Pods */,
+				D8A58255C7D18D9D9FF09054 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +77,39 @@
 		5C0C648D1E6D5899007C0516 /* JYCyclePicture */ = {
 			isa = PBXGroup;
 			children = (
+				5C995EB61E6F968B00ABC5D3 /* Image.plist */,
 				5C0C648E1E6D5899007C0516 /* AppDelegate.swift */,
 				5C0C64901E6D5899007C0516 /* ViewController.swift */,
 				5C0C64921E6D5899007C0516 /* Main.storyboard */,
 				5C0C64951E6D5899007C0516 /* Assets.xcassets */,
 				5C0C64971E6D5899007C0516 /* LaunchScreen.storyboard */,
 				5C0C649A1E6D5899007C0516 /* Info.plist */,
+				5C0C64A01E6D58C6007C0516 /* CycleView+Extension.swift */,
+				5C0C64A21E6D6136007C0516 /* CyclePictureView.swift */,
+				5C0C64A41E6E5B4E007C0516 /* CyclePictureCell.swift */,
+				5C0C64A61E6E950B007C0516 /* LocalPictureController.swift */,
+				5C0C64A81E6E9541007C0516 /* WebPictureController.swift */,
+				5C5134961E6FE24A00FEAC95 /* TestTableViewController.swift */,
+				5C5134981E700B1600FEAC95 /* TestWebViewController.swift */,
 			);
 			path = JYCyclePicture;
+			sourceTree = "<group>";
+		};
+		768761D36C6E0AD0655DDFC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CE38E5445911D562DA89AA0 /* Pods-JYCyclePicture.debug.xcconfig */,
+				D1F1E6CC802A473A6A0B8B02 /* Pods-JYCyclePicture.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8A58255C7D18D9D9FF09054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8FFA1ABAB2FE3073BD0FA37 /* Pods_JYCyclePicture.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C0C649D1E6D5899007C0516 /* Build configuration list for PBXNativeTarget "JYCyclePicture" */;
 			buildPhases = (
+				F81C390EC7D407705453C2AE /* [CP] Check Pods Manifest.lock */,
 				5C0C64871E6D5899007C0516 /* Sources */,
 				5C0C64881E6D5899007C0516 /* Frameworks */,
 				5C0C64891E6D5899007C0516 /* Resources */,
+				21D7D1AAE95FC2882C3FD487 /* [CP] Embed Pods Frameworks */,
+				627F9D991929340052F72E28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C995EB71E6F968B00ABC5D3 /* Image.plist in Resources */,
 				5C0C64991E6D5899007C0516 /* LaunchScreen.storyboard in Resources */,
 				5C0C64961E6D5899007C0516 /* Assets.xcassets in Resources */,
 				5C0C64941E6D5899007C0516 /* Main.storyboard in Resources */,
@@ -132,13 +184,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21D7D1AAE95FC2882C3FD487 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JYCyclePicture/Pods-JYCyclePicture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		627F9D991929340052F72E28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JYCyclePicture/Pods-JYCyclePicture-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F81C390EC7D407705453C2AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C0C64871E6D5899007C0516 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0C64A31E6D6136007C0516 /* CyclePictureView.swift in Sources */,
+				5C0C64A51E6E5B4E007C0516 /* CyclePictureCell.swift in Sources */,
+				5C0C64A91E6E9541007C0516 /* WebPictureController.swift in Sources */,
+				5C0C64A11E6D58C6007C0516 /* CycleView+Extension.swift in Sources */,
 				5C0C64911E6D5899007C0516 /* ViewController.swift in Sources */,
+				5C0C64A71E6E950B007C0516 /* LocalPictureController.swift in Sources */,
 				5C0C648F1E6D5899007C0516 /* AppDelegate.swift in Sources */,
+				5C5134991E700B1600FEAC95 /* TestWebViewController.swift in Sources */,
+				5C5134971E6FE24A00FEAC95 /* TestTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +366,7 @@
 		};
 		5C0C649E1E6D5899007C0516 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE38E5445911D562DA89AA0 /* Pods-JYCyclePicture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JE8CSGTB5D;
@@ -272,6 +380,7 @@
 		};
 		5C0C649F1E6D5899007C0516 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F1E6CC802A473A6A0B8B02 /* Pods-JYCyclePicture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JE8CSGTB5D;
@@ -302,6 +411,7 @@
 				5C0C649F1E6D5899007C0516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
