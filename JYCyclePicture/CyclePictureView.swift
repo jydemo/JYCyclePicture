@@ -12,6 +12,10 @@ protocol CyclePictureViewDelegate: class {
     func cyclePictureView(cyclePictureView: CyclePictureView, didSelectItemAtIndexPath indexPath: IndexPath)
 }
 
+protocol CyclePictureViewDataSource: class{
+    func numberOfItem(in collection: UICollectionView) -> Int
+}
+
 class CyclePictureView: UIView, PageControlAlimentProtocol, EndlessCycleProtocol {
 
     var localImageArray: [String]? {
@@ -58,6 +62,7 @@ class CyclePictureView: UIView, PageControlAlimentProtocol, EndlessCycleProtocol
     var detailLabelAlpha: CGFloat?
     //代理
     weak var delegate: CyclePictureViewDelegate?
+    weak var dataSource: CyclePictureViewDataSource?
     //自动滚动
     var autoScroll: Bool = true {
         didSet{
@@ -247,7 +252,11 @@ extension CyclePictureView {
 
 extension CyclePictureView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.actualItemCount
+        guard let dataSource = self.dataSource else {
+            return 0
+        }
+        
+        return dataSource.numberOfItem(in: collectionView)//self.actualItemCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -29,6 +29,7 @@ class LocalPictureController: UIViewController {
         cyclePictureView.localImageArray = localImageArray
         cyclePictureView.backgroundColor = UIColor.red
         cyclePictureView.delegate = self
+        cyclePictureView.dataSource = self
         cyclePictureView.timeInterval = 1
         cyclePictureView.pageControlAliment = .leftBottom
         self.view.addSubview(cyclePictureView)
@@ -60,4 +61,12 @@ extension LocalPictureController: CyclePictureViewDelegate {
     func cyclePictureView(cyclePictureView: CyclePictureView, didSelectItemAtIndexPath indexPath: IndexPath) {
         
     }
+}
+extension LocalPictureController: CyclePictureViewDataSource {
+    
+    func numberOfItem(in collection: UICollectionView) -> Int {
+        return cyclePictureView.actualItemCount
+    }
+
+
 }

@@ -20,21 +20,30 @@ enum ImageType {
 
 struct ImageBox {
     var imageType: ImageType
-    var imageDetailArray = [String]()
+    //var imageDetailArray = [String]()
     var imageArray: [ImageSource]
     init(imageType: ImageType, imageArray: [String]) {
         self.imageType = imageType
         self.imageArray = []
-        self.imageDetailArray = imageArray
+        //self.imageDetailArray = imageArray
         switch imageType {
             case .local:
-                for str in imageArray {
+                self.imageArray = imageArray.flatMap({ (str) -> ImageSource in
+                    return ImageSource.local(name: str)
+                })
+                /*for str in imageArray {
                     self.imageArray.append(ImageSource.local(name: str))
-                }
+                }*/
             case .network:
-                for str in imageArray {
+                self.imageArray = imageArray.flatMap({ (str) -> ImageSource in
+                    return ImageSource.network(urlStr: str)
+                })
+                
+                //print("\(netsource.debugDescription)")
+                
+                /*for str in imageArray {
                     self.imageArray.append(ImageSource.network(urlStr: str))
-                }
+                }*/
         }
     }
         
