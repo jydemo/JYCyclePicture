@@ -31,11 +31,19 @@ class TestWebViewController: UIViewController {
             imageURLArray.append(dict["image"] as! String)
             imageDetailArray.append(dict["title"] as! String)
         }
+        
+        setCyclePictureView()
+    }
+    
+    private func setCyclePictureView() {
         cyclePictureView.imageURLArray = imageURLArray
         cyclePictureView.imageDetailArray = imageDetailArray
         cyclePictureView.autoScroll = true
         cyclePictureView.placeholderImage = UIImage(named: "302")
+        cyclePictureView.pageControlAliment = .leftBottom
         cyclePictureView.timeInterval = 1
+        cyclePictureView.dataSource = self
+        cyclePictureView.delegate = self
         cyclePictureView.detailLabelBackgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)
     }
 
@@ -55,4 +63,36 @@ class TestWebViewController: UIViewController {
     }
     */
 
+}
+extension TestWebViewController: CyclePictureViewDataSource {
+    func numberOfItem(in collection: UICollectionView) -> Int {
+        return cyclePictureView.actualItemCount
+    }
+
+}
+extension TestWebViewController: CyclePictureViewDelegate {
+    func cyclePictureView(cyclePictureView: CyclePictureView, didSelectItemAtIndexPath indexPath: IndexPath) {
+        
+    }
+    func cyclePictureView(collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> CyclePictureCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CyclePictureCell
+        
+        if let placeholderImage = self.cyclePictureView.placeholderImage, let pictrueContentMode = self.cyclePictureView.pictureContentMode {
+            cell.placeholderImage = placeholderImage
+            cell.pictureContentMode = pictrueContentMode
+        }
+         
+         if let imageBox = self.cyclePictureView.imageBox {
+         let actualItemIndex = indexPath.item % imageBox.imageArray.count
+         cell.imageSource = imageBox[actualItemIndex]
+         }
+         
+         if let array = self.cyclePictureView.imageDetailArray {
+         
+         let actualItemindex = indexPath.item % array.count
+         cell.imageDetail = array[actualItemindex]
+         }
+         
+         return cell
+    }
 }

@@ -27,16 +27,19 @@ class TestTableViewController: UITableViewController {
             imageURLArray.append(dict["image"] as! String)
             imageDetailArray.append(dict["title"] as! String)
         }
-        cyclePictureView.imageURLArray = imageURLArray
-        cyclePictureView.imageDetailArray = imageDetailArray
+        
         self.tableView.tableHeaderView = cyclePictureView
     }
     
-    private lazy var cyclePictureView: CyclePictureView = {
+    fileprivate lazy var cyclePictureView: CyclePictureView = { [unowned self] in
         let cyclePictureView = CyclePictureView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 200))
         cyclePictureView.backgroundColor = UIColor.red
         cyclePictureView.timeInterval = 1
         cyclePictureView.pageControlAliment = .centerBottom
+        cyclePictureView.imageURLArray = self.imageURLArray
+        cyclePictureView.imageDetailArray = self.imageDetailArray
+        cyclePictureView.dataSource = self
+        cyclePictureView.delegate = self
         return cyclePictureView
     }()
 
@@ -112,5 +115,34 @@ class TestTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+extension TestTableViewController: CyclePictureViewDataSource {
+    func numberOfItem(in collection: UICollectionView) -> Int {
+        return self.cyclePictureView.actualItemCount
+    }
+}
+extension TestTableViewController: CyclePictureViewDelegate {
+    func cyclePictureView(collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> CyclePictureCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CyclePictureCell
+         
+        
+         
+         if let imageBox = self.cyclePictureView.imageBox {
+         let actualItemIndex = indexPath.item % imageBox.imageArray.count
+         cell.imageSource = imageBox[actualItemIndex]
+         }
+         
+         if let array = self.cyclePictureView.imageDetailArray {
+         
+         let actualItemindex = indexPath.item % array.count
+         cell.imageDetail = array[actualItemindex]
+         }
+         
+         return cell
+    }
+    func cyclePictureView(cyclePictureView: CyclePictureView, didSelectItemAtIndexPath indexPath: IndexPath) {
+        
+    }
 
 }

@@ -8,8 +8,11 @@
 
 import UIKit
 
+let cellID = "CyclePictureCell"
+
 protocol CyclePictureViewDelegate: class {
     func cyclePictureView(cyclePictureView: CyclePictureView, didSelectItemAtIndexPath indexPath: IndexPath)
+    func cyclePictureView(collectionView:UICollectionView, cellForItemAt indexPath: IndexPath) -> CyclePictureCell
 }
 
 protocol CyclePictureViewDataSource: class{
@@ -90,14 +93,14 @@ class CyclePictureView: UIView, PageControlAlimentProtocol, EndlessCycleProtocol
     
    
    ///存放照片资源
-    fileprivate var imageBox: ImageBox?
+    var imageBox: ImageBox?
     //实际item个数（无限滚动情况下）
     var actualItemCount = 0
     let imageTimes = 150
     var timer: Timer?
     fileprivate var pageControl: UIPageControl?
     fileprivate var collectionView: UICollectionView!
-    fileprivate var cellID = "CyclePictureCell"
+    
     fileprivate var flowLayout: UICollectionViewFlowLayout?
     
     /*init(frame: CGRect, localImageArray: [String]?) {
@@ -123,14 +126,16 @@ class CyclePictureView: UIView, PageControlAlimentProtocol, EndlessCycleProtocol
     override init(frame: CGRect) {
     
         super.init(frame: frame)
-        self.setupCollectionView()
+        //self.setupCollectionView()
+        self.addSubview(othercollectionView)
     
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //fatalError("init(coder:) has not been implemented")
-        setupCollectionView()
+        //setupCollectionView()
+        self.addSubview(othercollectionView)
     }
     
     
@@ -138,7 +143,7 @@ class CyclePictureView: UIView, PageControlAlimentProtocol, EndlessCycleProtocol
         
     }
     
-    private func setupCollectionView() {
+    /*private func setupCollectionView() {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 0
         flowLayout.scrollDirection = .horizontal
@@ -153,7 +158,22 @@ class CyclePictureView: UIView, PageControlAlimentProtocol, EndlessCycleProtocol
         collectionView.register(CyclePictureCell.self, forCellWithReuseIdentifier: cellID)
         self.collectionView = collectionView
         self.addSubview(collectionView)
-    }
+    }*/
+    
+    private lazy var othercollectionView: UICollectionView = { [unowned self] in
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumLineSpacing = 0
+        flowLayout.scrollDirection = .horizontal
+        self.flowLayout = flowLayout
+        let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: flowLayout)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(CyclePictureCell.self, forCellWithReuseIdentifier: cellID)
+        self.collectionView = collectionView
+        return collectionView
+    }()
     
     fileprivate func setupPageControl() {
         self.pageControl?.removeFromSuperview()
@@ -261,7 +281,12 @@ extension CyclePictureView: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CyclePictureCell
+        guard let cell = self.delegate?.cyclePictureView(collectionView: collectionView, cellForItemAt: indexPath) else {
+            return UICollectionViewCell()
+        }
+        return cell
+        
+        /*let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CyclePictureCell
         
         if let placeholderImage = self.placeholderImage, let pictrueContentMode = self.pictureContentMode {
             cell.placeholderImage = placeholderImage
@@ -288,7 +313,7 @@ extension CyclePictureView: UICollectionViewDataSource, UICollectionViewDelegate
         
         }
         
-        return cell
+        return cell*/
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
